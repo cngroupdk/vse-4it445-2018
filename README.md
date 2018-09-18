@@ -2,7 +2,7 @@
 
 ## JavaScript
 
-We will be using [Node.js](https://nodejs.org/) v6.11.3.
+We will be using [Node.js](https://nodejs.org/) v8.12.0 with [NPM](https://www.npmjs.com/) v6.4.1
 New JavaScript features (ES2015) are "enabled" for for all modern browsers with [Babel](https://babeljs.io/).
 
 ### Reference
