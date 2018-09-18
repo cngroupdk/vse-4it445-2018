@@ -3,12 +3,15 @@
 ## Git setup at the virtual machine
 
 1. check/correct your git settings
+
 ```bash
 git config --list
 git config --global user.name "User Name"
 git config --global user.email "username@example.com"
 ```
+
 2. initialize git repository
+
 ```bash
 cd code/cviceni
 git init
@@ -36,6 +39,7 @@ git log
 ```
 
 ### How to reset to current practice branch
+
 ```bash
 git fetch --all
 
@@ -53,21 +57,28 @@ go to https://github.com/cngroupdk/vse-4it445 and fork the repository to your gi
 create ssh key on virtual machine
 
 1. check if you already have keys
+
 ```bash
 ls -al ~/.ssh
 ```
+
 if `id_rsa.pub` exists go to step 3.
 
 2. generate an ssh key
+
 ```bash
 ssh-keygen
 ```
+
 3. go to https://github.com/settings/keys `new ssh key`
-copy the key
+   copy the key
+
 ```bash
 vim ~/.ssh/id_rsa.pub
 ```
+
 paste and add some descriptive name. Save
+
 ```bash
 git remote add origin <git@github.com:GITHUBUSERNAME/vse-4it445.git>
 
@@ -77,25 +88,31 @@ git push --set-upstream origin <branch-name>
 ```
 
 ## (optional) add ssh key
+
 you can add your ssh key to server so you don't have to use password every time you connect
 
 1. check if you already have keys
+
 ```bash
 ls -al ~/.ssh
 ```
+
 if `id_rsa.pub` exists go to step 3.
 
 2. generate an ssh key
+
 ```bash
 ssh-keygen
 ```
 
 3. add the key to server
+
 ```bash
 ssh-copy-id -i ~/.ssh/id_rsa.pub USERNAME@vse.handson.pro
 ```
 
 ## Firefox Plugins
+
 - [React Developer Tools](https://addons.mozilla.org/en-us/firefox/addon/react-devtools/)
 
 ## Used NPM Packages

@@ -1,6 +1,7 @@
 # ES6 basic overview
 
 ## no var: const / let
+
 Favor `const` over `let` in ES6. In JavaScript, `const` means that the identifier can’t be reassigned. Unlike true immutable datatypes a `const` object can have properties mutated!
 
 Use `let` when you need to reassign a variable. The use case for `let` tends to be for-loops or mathematical algorithms.
@@ -26,7 +27,7 @@ const companyInfo = {
   company: 'VSE',
   streetAddress: 'W. Churchilla 1938/4',
   city: 'Prague',
-}
+};
 
 const { name, email } = karlsPersonalData; // destructuring instead of `const name = karlsPersonalData.name
 const businessCard = {
@@ -35,8 +36,8 @@ const businessCard = {
   email,
 };
 ```
-[Example property shorthand notation && spread operator && destructuring](
-https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=MYewdgzgLgBA1gQwE4BsIAUCmSLgSgEQSgRgF4YBvAKBhjAQFtMAuGAcgGllMUZukTXuwA0tGFF5sAjACYAzABYArADYA7AA4AnGLqZGCAJYo27REgsABAG4RMAOmAAvUdQC-AbmrVQkWKCMAA4IYACeAJJgAGYg5FTigSHhZgBqAMoAom500EiYmFAAggAmJfkQEGYA6g4wAMIAFgCuSMCNJiik0trymgD0ijkwwEZQYWboggDmzZhu7j5-0FT0QiIwBsZ87vEWaFg4eITECJ4wvuArAEbNEEZgmJX1yCXxNHQMzBviDn9JoUiMRAP30hhMYi8QA&debug=false&circleciRepo=&evaluate=false&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=6.26.0)
+
+[Example property shorthand notation && spread operator && destructuring](https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=MYewdgzgLgBA1gQwE4BsIAUCmSLgSgEQSgRgF4YBvAKBhjAQFtMAuGAcgGllMUZukTXuwA0tGFF5sAjACYAzABYArADYA7AA4AnGLqZGCAJYo27REgsABAG4RMAOmAAvUdQC-AbmrVQkWKCMAA4IYACeAJJgAGYg5FTigSHhZgBqAMoAom500EiYmFAAggAmJfkQEGYA6g4wAMIAFgCuSMCNJiik0trymgD0ijkwwEZQYWboggDmzZhu7j5-0FT0QiIwBsZ87vEWaFg4eITECJ4wvuArAEbNEEZgmJX1yCXxNHQMzBviDn9JoUiMRAP30hhMYi8QA&debug=false&circleciRepo=&evaluate=false&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=6.26.0)
 
 ## classes
 
@@ -45,9 +46,9 @@ Formalize common JS pattern of simulating class like inheritance hierarchies usi
 ```js
 class BusinessCard {
   constructor(companyInfo, personalData) {
-    this.cardInfo =  {
+    this.cardInfo = {
       ...companyInfo,
-      ...personalData,  
+      ...personalData,
     };
   }
 
@@ -56,16 +57,19 @@ class BusinessCard {
   }
 }
 ```
-[Example classes]( https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=MYGwhgzhAEBCCuECWA7AplAwmATgE2gG8AoaaYAexQgBcd5gaKcAKSgWwAcwUBPASRQAzCgBponNDghUwIACJgaYAJRFSZaDQAWSCADpguPIJHQAvGULQNm6PocdufU2NuaH-ydNkKlYcRs7AF8Abg1g4g0AemicNDA8BGR0LGMWNRIyWLJKagoQNH0QCgBzFh09Q2NXFXDs6MjgoA&debug=false&circleciRepo=&evaluate=false&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=6.26.0)
+
+[Example classes](https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=MYGwhgzhAEBCCuECWA7AplAwmATgE2gG8AoaaYAexQgBcd5gaKcAKSgWwAcwUBPASRQAzCgBponNDghUwIACJgaYAJRFSZaDQAWSCADpguPIJHQAvGULQNm6PocdufU2NuaH-ydNkKlYcRs7AF8Abg1g4g0AemicNDA8BGR0LGMWNRIyWLJKagoQNH0QCgBzFh09Q2NXFXDs6MjgoA&debug=false&circleciRepo=&evaluate=false&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=6.26.0)
 
 ## ES modules
 
-Enables to import function, objects, classes or primitives that are  defined and exported by an external module script or other like.
+Enables to import function, objects, classes or primitives that are defined and exported by an external module script or other like.
+
 ```js
 import defaultMember from './module'; // import default from local module
 import * as membersName from 'npm-module'; // named import from external module every named export is property of membersName object
 import { function1, const2 as importedConst } from './local-module'; // named import from internal module
 ```
+
 all of above can be combined each of the modules that `export` can have at maximum one default export but zero to multiple named exports
 
 eg.:
@@ -85,17 +89,22 @@ export function2
 
 const privateConst = 'I am not exposed for export';
 ```
-[Example modules](
-https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=JYWwDg9gTgLgBAEwKYDMCGBXANjAskkAIySjhSghDgHIA6AehAgWyWoG44AoUSWOAFRw0AZzggCxKCIByaCWQpVqAOzAgAtExZY2nHuGjwA3mQwqAxjGAQVARgA0cC7ZEwATMLG8jSBAGFXeABfRUoaBiwICzQsLWZWDiA&debug=false&circleciRepo=&evaluate=false&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=6.26.0)
+
+[Example modules](https://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=JYWwDg9gTgLgBAEwKYDMCGBXANjAskkAIySjhSghDgHIA6AehAgWyWoG44AoUSWOAFRw0AZzggCxKCIByaCWQpVqAOzAgAtExZY2nHuGjwA3mQwqAxjGAQVARgA0cC7ZEwATMLG8jSBAGFXeABfRUoaBiwICzQsLWZWDiA&debug=false&circleciRepo=&evaluate=false&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=6.26.0)
 
 ## arrow function
 
 An arrow function expression has a shorter syntax than a function expression and does not bind its own this, arguments, super, or new.target (cant be used as constructors). These function expressions are best suited for non-method functions.
 
 ```js
-const someNoParameterFunction = () => { statements };
-const singleParameterFunction = parameter => ({ someObjectProperty: parameter });
-const returnOnlyExpression = stringParameter => `I am string that will be returned and this is the parameter: ${stringParameter}`
+const someNoParameterFunction = () => {
+  statements;
+};
+const singleParameterFunction = parameter => ({
+  someObjectProperty: parameter,
+});
+const returnOnlyExpression = stringParameter =>
+  `I am string that will be returned and this is the parameter: ${stringParameter}`;
 ```
 
 ## Comparison - new vs old JS
@@ -122,6 +131,7 @@ const businessCard = {
   email: 'email@example.com',
 };
 ```
+
 ```js
 const businessCard = {
   name: name,
@@ -137,6 +147,8 @@ const businessCard = {
   ...companyInfo,
 };
 ```
+
+<!-- prettier-ignore -->
 ```js
 const businessCard = Object.assign(
   { name: name },
@@ -149,6 +161,7 @@ const businessCard = Object.assign(
 ```js
 const { name, email } = karlsPersonalData;
 ```
+
 ```js
 var name = karlsPersonalData.name;
 var email = karlsPersonalData.email;
@@ -163,16 +176,17 @@ class BusinessCard {
   }
 }
 ```
+
 ```js
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
+    throw new TypeError('Cannot call a class as a function');
   }
 }
 var BusinessCard = function BusinessCard(companyInfo) {
   _classCallCheck(this, BusinessCard);
   this.companyInfo = companyInfo;
-}
+};
 ```
 
 ### ES modules
@@ -182,6 +196,7 @@ import { function1, const2 as importedConst } from './local-module';
 
 export default Member;
 ```
+
 ```js
 var _localModule = require('./local-module');
 
@@ -191,24 +206,25 @@ exports.default = Member;
 ### arrow function
 
 ```js
-() => 'something'; //anonymous function  
+() => 'something'; //anonymous function
 
 const someFunction = parameter => `some ${parameter}`;
 
 function someFunction(parameter) {
-  return "some " + parameter
+  return 'some ' + parameter;
 }
 ```
+
 ```js
-(function () {
+(function() {
   return 'something';
-})
+});
 
 var someFunction = function someFunction(parameter) {
-  return "some " + parameter;
-}
+  return 'some ' + parameter;
+};
 
 function someFunction(parameter) {
-  return "some " + parameter
+  return 'some ' + parameter;
 }
 ```

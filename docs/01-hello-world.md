@@ -5,8 +5,9 @@
 We suggest [Atom](https://atom.io/) editor to be used.
 
 You can use any editor you like, but:
-  - you should be able to edit remote files over SSH/SFTP,
-  - it should support modern JavaScript (ES2015+) and JSX syntax.
+
+- you should be able to edit remote files over SSH/SFTP,
+- it should support modern JavaScript (ES2015+) and JSX syntax.
 
 ### Download Atom
 
@@ -40,23 +41,23 @@ Change it to look like this (replace `USERNAME` with your username):
 
 ```json
 {
-    "protocol": "sftp",
-    "host": "vse.handson.pro",
-    "port": 22,
-    "user": "USERNAME",
-    "promptForPass": true,
-    "remote": "/home/USERNAME/code/cviceni/",
+  "protocol": "sftp",
+  "host": "vse.handson.pro",
+  "port": 22,
+  "user": "USERNAME",
+  "promptForPass": true,
+  "remote": "/home/USERNAME/code/cviceni/",
 
-    "agent": "",
-    "privatekey": "",
-    "passphrase": "",
-    "hosthash": "",
-    "ignorehost": true,
-    "connTimeout": 10000,
-    "keepalive": 10000,
-    "keyboardInteractive": false,
-    "watch": [],
-    "watchTimeout": 500
+  "agent": "",
+  "privatekey": "",
+  "passphrase": "",
+  "hosthash": "",
+  "ignorehost": true,
+  "connTimeout": 10000,
+  "keepalive": 10000,
+  "keyboardInteractive": false,
+  "watch": [],
+  "watchTimeout": 500
 }
 ```
 
@@ -74,12 +75,12 @@ Now you should see second tree view with files on server.
 
 - [Git](https://git-scm.com/)
   - use of command line tool is suggested
-- [Node.js v6.11.3](https://nodejs.org/)
+- [Node.js v8.12.0](https://nodejs.org/)
   - use of [nvm - Node Version Manager](https://github.com/creationix/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows) is suggested
     - this allows simple management of multiple Node.js versions on your compouter
-    - to install 6.11.3 run `nvm install 6.11.3`
-    - to use 6.11 run `nvm use 6.11.3` (this may be required each time you start new Terminal session)
-  - if `nvm` is not your cup of tea, you can donwload it directly from [Node.js v6.11.3](https://nodejs.org/) site
+    - to install 8.12.0 run `nvm install 8.12.0`
+    - to use 8.12.0 run `nvm use 8.12.0` (this may be required each time you start new Terminal session)
+  - if `nvm` is not your cup of tea, you can donwload it directly from [Node.js v8.12.0](https://nodejs.org/) site
 
 ### Clone Git Repo
 

@@ -2,13 +2,13 @@
 
 ## JavaScript
 
-We will be using [Node.js](https://nodejs.org/) v8.12.0 with [NPM](https://www.npmjs.com/) v6.4.1
+We will be using [Node.js](https://nodejs.org/) v8.12.0.
 New JavaScript features (ES2015) are "enabled" for for all modern browsers with [Babel](https://babeljs.io/).
 
 ### Reference
 
 - [JavaScript reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-- [Learn ES2015](https://babeljs.io/docs/learn-es2015/) + more:
+- [Learn ES2015](https://babeljs.io/docs/en/learn) + more:
   - [class properties](http://babeljs.io/docs/plugins/transform-class-properties/)
   - [object rest spread](http://babeljs.io/docs/plugins/transform-object-rest-spread/)
   - [async functions](http://babeljs.io/docs/plugins/syntax-async-functions/)
@@ -24,22 +24,20 @@ New JavaScript features (ES2015) are "enabled" for for all modern browsers with 
 
 ### JavaScript Packages
 
-- [npm docs](https://docs.npmjs.com/cli/)
+- [yarn CLI docs](https://yarnpkg.com/en/docs/cli/)
 - Useful commands:
-  - `npm install` (install local dependencies - based on `package.json` file)
-  - `npm install --save <package-name>`
-  - `npm run`
-  - `npm run <command>`
+  - `yarn install` (install local dependencies - based on `package.json` and `yarn.lock` files)
+  - `yarn add <package-name>`
+  - `yarn run`
+  - `yarn <script-name>`
 - Search for packages:
-  - **[npmsearch.com](http://npmsearch.com/)**
-  - [js.coach/react](https://js.coach/react)
-  - [awesome-react-components](http://devarchy.com/react-components)
   - [npmjs.com](https://www.npmjs.com/)
+  - **[js.coach/react](https://js.coach/react)**
 
 ### React
 
-- [React docs](https://facebook.github.io/react/docs/)
-- app is created using [create-react-app](https://github.com/facebookincubator/create-react-app)
+- **[React docs](https://facebook.github.io/react/docs/)**
+- app is created using [create-react-app](https://github.com/facebook/create-react-app)
 
 ## Server Setup
 
@@ -52,4 +50,4 @@ New JavaScript features (ES2015) are "enabled" for for all modern browsers with 
 
 - [dev.frontend.**username**.vse.handson.pro](http://dev.frontend.username.vse.handson.pro)
 - [frontend.**username**.vse.handson.pro](http://frontend.username.vse.handson.pro)
-  - requires `npm run build`
+  - requires `yarn build`

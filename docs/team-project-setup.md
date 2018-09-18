@@ -34,7 +34,6 @@ This will clone your project to `~/code/project` folder.
 
 (`YOUR_PROJECT_CLONE_URL` should look like `git@github.com:cngroupdk/vse-4it445.git` in case of GitHub and SSH)
 
-
 ## Setup Using Skeleton from Practical Classes
 
 This describes steps required after cloning your git repo which is based on [practical classes skeleton](https://github.com/cngroupdk/vse-4it445).
@@ -55,7 +54,6 @@ Add `"main": "node_modules/react-scripts/scripts/start.js"` to `package.json` so
 }
 ```
 
-
 ### Production Frontend Build
 
 The best way to present project is a build version (build compresses JavaScript and turns on optimizations in React).
@@ -63,11 +61,9 @@ The best way to present project is a build version (build compresses JavaScript 
 Use `npm run build` to update build folder.
 Then open URL without then `dev` part [http://frontend.teamx1.vse.handson.pro/](http://frontend.teamx1.vse.handson.pro/) (use your team login in URL).
 
-
 ### Backend
 
 Remember copy and edit `.env.example` to `.env` and add team project MySQL login info.
-
 
 ### Finalize
 
@@ -121,6 +117,7 @@ Add `GLOBAL.PhusionPassenger` to `if` that determins if server should start.
 
 So this in `backend/server/server.js`:
 
+<!-- prettier-ignore -->
 ```js
 boot(app, __dirname, function(err) {
   if (err) throw err;
@@ -133,6 +130,7 @@ boot(app, __dirname, function(err) {
 
 should look like this:
 
+<!-- prettier-ignore -->
 ```js
 boot(app, __dirname, function(err) {
   if (err) throw err;
