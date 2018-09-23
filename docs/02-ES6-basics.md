@@ -2,7 +2,7 @@
 
 ## no var: const / let
 
-Favor `const` over `let` in ES6. In JavaScript, `const` means that the identifier can’t be reassigned. Unlike true immutable datatypes a `const` object can have properties mutated!
+Favor `const` over `let` in ES6. In JavaScript, `const` means that the identifier can't be reassigned. Unlike true immutable datatypes a `const` object can have properties mutated!
 
 Use `let` when you need to reassign a variable. The use case for `let` tends to be for-loops or mathematical algorithms.
 
