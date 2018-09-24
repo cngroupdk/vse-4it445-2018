@@ -120,3 +120,13 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub USERNAME@vse.handson.pro
 - [Bootstrap](http://getbootstrap.com/)
 - [classnames](https://github.com/JedWatson/classnames)
 - [react-router](https://github.com/ReactTraining/react-router)
+
+## Practical Tasks
+
+ * Go trough ES6 Basics
+ * Go trough Git Basics and add ssh keys
+ * Basic components & package installation (`<Price />`, `<FontIcon />`, [`@fortawesome/fontawesome-free`](https://www.npmjs.com/package/@fortawesome/fontawesome-free))
+ * Page (`<ProductDetail />`, `<ContactDetail/>`)
+ * Routing (Connect `ContactDetail` to routes via `ID`)
+ * Try to fetch contact data from api (TBD)
+ * Use app state (TBD)
