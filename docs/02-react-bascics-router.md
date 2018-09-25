@@ -128,5 +128,5 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub USERNAME@vse.handson.pro
  * Basic components & package installation (`<Price />`, `<FontIcon />`, [`@fortawesome/fontawesome-free`](https://www.npmjs.com/package/@fortawesome/fontawesome-free))
  * Page (`<ProductDetail />`, `<ContactDetail/>`)
  * Routing (Connect `ContactDetail` to routes via `ID`)
- * Try to fetch contact data from api (TBD)
- * Use app state (TBD)
+ * (advanced) Try to fetch contact data from api (use axios and `https://jsonplaceholder.typicode.com/users/`)
+ * (advanced) Use the fetched data in app state.
