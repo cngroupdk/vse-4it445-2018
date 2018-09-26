@@ -7,7 +7,7 @@ import { HomePage } from './components/pages/HomePage';
 import { ProductListPageRaw } from './components/pages/ProductListPage';
 // import { ProductDetailPage } from './components/pages/ProductDetailPage'; TODO: Create page
 import { ContactPageRaw } from './components/pages/ContactPage';
-// import { ContactDetail } from './components/pages/ContactDetail';
+import { ContactDetail } from './components/pages/ContactDetail';
 import { ShoppingCartPageRaw } from './components/pages/ShoppingCartPage';
 import { PageNotFound } from './components/pages/PageNotFound';
 
@@ -18,7 +18,7 @@ export const AppRoutes = () => (
       <Route path="/products" exact component={ProductListPageRaw} />
       <Route path="/products/:productId" exact component={PageNotFound} />
       <Route path="/contact" exact component={ContactPageRaw} />
-      {/* TODO: add Contact Detail route*/}
+      <Route path="/contact/:id" exact component={ContactDetail} />
       <Route path="/cart" exact component={ShoppingCartPageRaw} />
       <Route path="*" component={PageNotFound} />
     </Switch>

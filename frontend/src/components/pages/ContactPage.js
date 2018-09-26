@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { ContactListItem } from '../molecules/ContactListItem';
+import axios from 'axios';
+
+
 
 export class ContactPageRaw extends Component {
   constructor(props) {
@@ -9,6 +12,16 @@ export class ContactPageRaw extends Component {
       salesContacts: [],
       marketingContacts: [],
     };
+  }
+
+  componentDidMount() {
+    axios.get('https://jsonplaceholder.typicode.com/users/').then(res => {
+      console.log(res)
+      this.setState({
+        salesContacts: res.data.filter(user => user.id < 6),
+        marketingContacts: res.data.filter(user => user.id > 5),
+      })
+    })
   }
 
   render() {

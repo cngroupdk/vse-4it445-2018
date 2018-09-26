@@ -6,7 +6,7 @@ import { Heading } from '../atoms/Heading';
 import { Layout } from '../atoms/Layout';
 import { Link } from '../atoms/Link';
 import { Paragraph } from '../atoms/Paragraph';
-// import { Price } from '../atoms/Price';
+import { Price } from '../atoms/Price';
 
 export const ProductListItem = ({ product }) => {
   const { id, title, price, shortInfo } = product;
@@ -20,7 +20,7 @@ export const ProductListItem = ({ product }) => {
         <Link to={`/products/${id}`}>{title}</Link>
       </Heading>
       <Paragraph>
-        Price: {price} {/* TODO: <Price amount={price} />*/}
+        Price: <Price amount={price} />
       </Paragraph>
       <Paragraph>{shortInfo}</Paragraph>
     </Layout>

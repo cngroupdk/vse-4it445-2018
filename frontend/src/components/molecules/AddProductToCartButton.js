@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// import { FontIcon } from '../atoms/FontIcon';
+import { FontIcon } from '../atoms/FontIcon';
 
 export class AddProductToCartButtonRaw extends Component {
   render() {
@@ -10,7 +10,7 @@ export class AddProductToCartButtonRaw extends Component {
         type="button"
         className="btn btn-success"
       >
-        {/* TODO: <FontIcon icon="cart-arrow-down" /> */}
+        <FontIcon icon="cart-arrow-down" /> 
         Add to cart
       </button>
     );
