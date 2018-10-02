@@ -11,10 +11,15 @@ export class ContactPageRaw extends Component {
     this.state = {
       salesContacts: [],
       marketingContacts: [],
+      openedPersonIds: [],
     };
   }
 
   componentDidMount() {
+    this.fetchContacts()
+  }
+
+  fetchContacts() {
     axios.get('https://jsonplaceholder.typicode.com/users/').then(res => {
       console.log(res)
       this.setState({
@@ -25,7 +30,11 @@ export class ContactPageRaw extends Component {
   }
 
   render() {
-    const { salesContacts, marketingContacts } = this.state;
+    const {
+      salesContacts,
+      marketingContacts,
+      openedPersonIds,
+    } = this.state;
 
     return (
       <div>
@@ -36,7 +45,19 @@ export class ContactPageRaw extends Component {
           <h2>Contacts</h2>
           <h3>Sales</h3>
           {salesContacts.map(person => (
-            <ContactListItem person={person} key={person.id} />
+            <ContactListItem
+              isOpen={openedPersonIds.includes(person.id)}
+              person={person}
+              key={person.id}
+              onOpen={
+                (id) => this.setState({
+                  openedPersonIds: [
+                    id,
+                    ...openedPersonIds.slice(0, 1),
+                  ],
+                })
+              }
+            />
           ))}
         </div>
         <div>
