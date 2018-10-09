@@ -58,11 +58,11 @@ export const shoppingCartReducer = (state = initialState, action) => { // shoppi
       const { product } = action.payload;
 
       return {
-        ...state // spread previous state
+        ...state, // spread previous state
         items: [
-            ...state.items // spread previous items
-            product // add product at the last position
-        ]
+            ...state.items, // spread previous items
+            product, // add product at the last position
+        ],
       };
     }
 
