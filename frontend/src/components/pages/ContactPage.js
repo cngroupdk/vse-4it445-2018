@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+
+import api from '../../api.js';
 
 import { ContactListItem } from '../molecules/ContactListItem';
 
@@ -19,7 +20,7 @@ export class ContactPageRaw extends Component {
   }
 
   fetchContacts() {
-    axios.get('https://jsonplaceholder.typicode.com/users/').then(response => {
+    api.get('https://jsonplaceholder.typicode.com/users/').then(response => {
       const { data } = response;
 
       this.setState({
@@ -55,6 +56,7 @@ export class ContactPageRaw extends Component {
               onOpen={this.openContact}
             />
           ))}
+          <hr />
         </div>
         <div>
           <h3>Marketing</h3>
@@ -66,9 +68,6 @@ export class ContactPageRaw extends Component {
               onOpen={this.openContact}
             />
           ))}
-        </div>
-        <div>
-          <h3>Claims</h3>
         </div>
       </div>
     );

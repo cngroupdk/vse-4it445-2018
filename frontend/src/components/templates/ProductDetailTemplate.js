@@ -1,16 +1,15 @@
 import React from 'react';
 
 import { AddProductToCartButton } from '../molecules/AddProductToCartButton';
-
 import { Heading } from '../atoms/Heading';
-import { Nav } from '../atoms/Nav';
-import { NavTabButton } from '../atoms/NavTabButton';
-import { NavItem } from '../atoms/NavItem';
-import { Paragraph } from '../atoms/Paragraph';
-import { Price } from '../atoms/Price';
 import { Jumbotron } from '../atoms/Jumbotron';
 import { Layout } from '../atoms/Layout';
 import { LoadingIndicator } from '../molecules/LoadingIndicator';
+import { Nav } from '../atoms/Nav';
+import { NavItem } from '../atoms/NavItem';
+import { NavTabButton } from '../atoms/NavTabButton';
+import { Paragraph } from '../atoms/Paragraph';
+import { Price } from '../atoms/Price';
 
 export const ProductDetailTemplate = ({
   isLoading,

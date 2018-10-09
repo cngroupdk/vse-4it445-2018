@@ -1,5 +1,6 @@
 import thunk from 'redux-thunk';
 import { applyMiddleware, createStore, compose } from 'redux';
+import { persistStore } from 'redux-persist';
 
 import api from '../api';
 import { createRootReducer } from './createRootReducer';
@@ -14,5 +15,7 @@ export const configureStore = () => {
     composeEnhancers(applyMiddleware(thunk.withExtraArgument({ api }))),
   );
 
-  return store;
+  const persistor = persistStore(store);
+
+  return { persistor, store };
 };

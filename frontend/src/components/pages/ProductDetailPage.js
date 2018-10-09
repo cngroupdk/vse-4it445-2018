@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import api from '../../api.js';
+
 import { ProductDetailTemplate } from '../templates/ProductDetailTemplate';
 
 export class ProductDetailPage extends Component {
@@ -8,13 +10,17 @@ export class ProductDetailPage extends Component {
 
     this.state = {
       activeTabId: 0,
-      product: {
-        id: 1,
-        title: 'Abc',
-        price: 10000,
-        shortInfo: 'Here is an info...',
-      },
+      product: null,
     };
+  }
+
+  componentDidMount() {
+    const { productId } = this.props.match.params;
+
+    api(`products/${productId}`).then(response => {
+      const { product } = response.data;
+      this.setState({ product });
+    });
   }
 
   selectTab = tabId => {

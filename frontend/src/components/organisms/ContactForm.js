@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { Button } from '../atoms/Button';
+import { Layout } from '../atoms/Layout';
 import { Row } from '../atoms/Row';
 import { InputWithLabel } from '../molecules/InputWithLabel';
 import { TextareaWithLabel } from '../molecules/TextareaWithLabel';
@@ -19,7 +20,7 @@ export class ContactForm extends Component {
     return (
       <form onSubmit={onSubmit}>
         <Row>
-          <div className="col-md-6">
+          <Layout className="col-md-6">
             <InputWithLabel
               id="name"
               label="Name"
@@ -35,7 +36,7 @@ export class ContactForm extends Component {
               value={email}
               onChange={onChange}
             />
-          </div>
+          </Layout>
         </Row>
         <TextareaWithLabel
           id="message"
@@ -43,7 +44,7 @@ export class ContactForm extends Component {
           value={message}
           onChange={onChange}
         />
-        <Button text="Send contact requrest" />
+        <Button title="Send contact requrest" type="submit" />
       </form>
     );
   }

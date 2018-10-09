@@ -17,7 +17,6 @@ export const AppRoutes = () => (
       <Route path="/" exact component={HomePage} />
       <Route path="/products" exact component={ProductListPage} />
       <Route path="/products/:productId" exact component={ProductDetailPage} />
-      <Route path="/products/:productId" exact component={PageNotFound} />
       <Route path="/contact" exact component={ContactPage} />
       <Route path="/contact/:contactId" exact component={ContactDetail} />
       <Route path="/cart" exact component={ShoppingCartPage} />
