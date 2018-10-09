@@ -123,8 +123,8 @@ export class AddProductToCartButtonRaw extends Component {
 `AddProductToCartButton.js` redux enhancement
 ```js
 import { connect } from 'react-redux';
-import { addProductToCart } from './actions';
-import { getStoreIsEmpty } from './reducer';
+import { addProductToCart } from '../../services/ShoppingCart/actions';
+import { getStoreIsEmpty } from '../../services/ShoppingCart/reducer';
 
  // reads state (from reducer)
 const mapStateToProps = state => ({
