@@ -23,7 +23,7 @@
 
 Each action have a `type` -> name that uniquely identifies the action and can also have `payload` as second parameter it is used to pass data
 
-`actions.js`
+`src/services/ShoppingCart/actions.js`
 ```js
 // action type
 export const SHOPPING_CART_ADD_PRODUCT = 'SHOPPING_CART_ADD_PRODUCT';
@@ -40,7 +40,7 @@ type: SHOPPING_CART_ADD_PRODUCT,
 
 ## 2) create reducer or reaction to action in existing reducer
 
-`reducer.js` (store)
+`src/services/ShoppingCart/reducer.js`
 ```js
 import {
   SHOPPING_CART_ADD_PRODUCT,
@@ -81,7 +81,7 @@ export const getStoreIsEmpty = ({ items }) => !items.length > 0;
 ```js
 import { combineReducers } from 'redux';
 
-import { shoppingCartReducer } from '../components/ShoppingCart/reducer';
+import { shoppingCartReducer } from '../services/ShoppingCart/reducer';
 
 export const createRootReducer = () => {
   const rootReducer = combineReducers({
