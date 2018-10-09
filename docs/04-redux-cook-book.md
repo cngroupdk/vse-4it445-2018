@@ -127,8 +127,8 @@ import { addProductToCart } from '../../services/ShoppingCart/actions';
 import { getStoreIsEmpty } from '../../services/ShoppingCart/reducer';
 
  // reads state (from reducer)
-const mapStateToProps = state => ({
-  cartIsEmpty: getStoreIsEmpty(state.shoppingCart) // favor selectors
+const mapStateToProps = storeState => ({
+  cartIsEmpty: getStoreIsEmpty(storeState.shoppingCart) // favor selectors
 });
 
 // actions
