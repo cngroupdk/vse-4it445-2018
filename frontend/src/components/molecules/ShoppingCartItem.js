@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import { Button } from '../atoms/Button';
 import { FontIcon } from '../atoms/FontIcon';
 import { Heading } from '../atoms/Heading';
 import { Layout } from '../atoms/Layout';
+import {
+  removeProductFromCart
+} from '../../services/ShoppingCart/actions';
 
-export class ShoppingCartItem extends Component {
+export class ShoppingCartItemRaw extends Component {
   static propTypes = {
     count: PropTypes.number.isRequired,
     product: PropTypes.shape({
@@ -17,7 +21,11 @@ export class ShoppingCartItem extends Component {
   };
 
   render() {
-    const { product, count } = this.props;
+    const {
+      product,
+      count,
+      removeProductFromCart,
+    } = this.props;
 
     return (
       <Heading level="5" className="row">
@@ -31,7 +39,13 @@ export class ShoppingCartItem extends Component {
           &nbsp;Kč
         </Layout>
         <Layout className="col-sm-1 text-right">
-          <Button variant="danger" size="sm">
+          <Button
+            onClick={() =>
+              removeProductFromCart(product.id)
+            }
+            variant="danger"
+            size="sm"
+          >
             <FontIcon icon="trash" />
           </Button>
         </Layout>
@@ -39,3 +53,14 @@ export class ShoppingCartItem extends Component {
     );
   }
 }
+
+const mapStateToProps = storeState => ({ });
+
+const mapDispatchToProps = {
+  removeProductFromCart,
+};
+
+export const ShoppingCartItem = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(ShoppingCartItemRaw);
