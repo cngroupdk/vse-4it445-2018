@@ -71,7 +71,7 @@ export const shoppingCartReducer = (state = initialState, action) => { // shoppi
   }
 };
 // selectors - wrap the store so you dont need to know the store shape to get the data
-export const getStoreIsEmpty = ({ items }) => !items.length > 0;
+export const getItems = ({ items }) => items;
 ```
 ---
 
@@ -124,11 +124,11 @@ export class AddProductToCartButtonRaw extends Component {
 ```js
 import { connect } from 'react-redux';
 import { addProductToCart } from '../../services/ShoppingCart/actions';
-import { getStoreIsEmpty } from '../../services/ShoppingCart/reducer';
+import { getItems } from '../../services/ShoppingCart/reducer';
 
  // reads state (from reducer)
 const mapStateToProps = storeState => ({
-  cartIsEmpty: getStoreIsEmpty(storeState.shoppingCart) // favor selectors
+  items: getItems(storeState.shoppingCart) // favor selectors
 });
 
 // actions
