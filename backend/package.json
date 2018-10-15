@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "backpack",
+    "prettier": "cd ..; yarn prettier"
+  },
+  "dependencies": {
+    "backpack-core": "^0.7.0",
+    "express": "^4.16.4"
+  }
+}
