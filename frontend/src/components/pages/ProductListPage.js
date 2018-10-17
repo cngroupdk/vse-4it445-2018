@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import { PRODUCTS } from '../../mock-data';
 import { ProductListTemplate } from '../templates/ProductListTemplate';
+import { startFetchProducts } from '../../services/ProductList/actions';
+import {
+  getIsLoading,
+  getProducts,
+  getIsLoaded,
+  getError,
+  getIsError,
+} from '../../services/ProductList/reducer';
 
 class ProductListPageRaw extends Component {
+  componentDidMount() {
+    const { startFetchProducts } = this.props;
+    startFetchProducts();
+  }
+
   render() {
-    const products = PRODUCTS;
-    const isLoading = false;
-    const isLoaded = true;
-    const isError = false;
-    const error = null;
+    const { isLoading, products, isLoaded, isError, error } = this.props;
 
     return (
       <ProductListTemplate
@@ -23,4 +33,22 @@ class ProductListPageRaw extends Component {
   }
 }
 
-export const ProductListPage = ProductListPageRaw;
+const mapStateToProps = storeState => {
+  const { productList } = storeState;
+  return {
+    isLoading: getIsLoading(productList),
+    products: getProducts(productList),
+    isLoaded: getIsLoaded(productList),
+    error: getError(productList),
+    isError: getIsError(productList),
+  };
+};
+
+const mapDispatchToProps = {
+  startFetchProducts,
+};
+
+export const ProductListPage = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(ProductListPageRaw);
