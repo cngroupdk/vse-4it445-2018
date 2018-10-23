@@ -1,4 +1,4 @@
-# 5th Practical Class: DB and ORM
+# 6th Practical Class: DB and ORM
 
 # Docs
 
