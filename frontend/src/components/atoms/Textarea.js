@@ -30,7 +30,7 @@ export class Textarea extends Component {
         rows={rows || 5}
         value={value || ''}
         {...rest}
-        onChange={this.onChange}
+        // onChange={this.onChange}
       />
     );
   }
