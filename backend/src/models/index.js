@@ -23,7 +23,10 @@ if (config.use_env_variable) {
 }
 
 // Add all modules to this array
-const modelModules = [require('./product')];
+const modelModules = [
+  require('./product'),
+  require('./contactform'),
+];
 
 modelModules.forEach(modelModule => {
   const model = modelModule(sequelize, DataTypes);
