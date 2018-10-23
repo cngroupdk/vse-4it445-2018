@@ -23,7 +23,7 @@ yarn sequelize db:seed:all --debug
 # Run `build:watch`
 
 ```bash
-npm run build:watch
+yarn build:watch
 ```
 
 ---
