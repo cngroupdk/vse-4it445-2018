@@ -1,24 +1,17 @@
-import { PRODUCTS } from './testData';
+import db from '../../models/';
 
 export const productsController = async (req, res) => {
-  return res.json({ products: PRODUCTS });
+  const products = await db.Product.findAll({});
+  res.json({ products });
 };
 
 export const productDetailController = async (req, res, next) => {
-  const productId = Number(req.params.id);
-  const product = findProductById(productId);
+  const { params } = req;
+  const product = await db.Product.findById(Number(params.id), {});
 
   if (!product) {
-    next();
+    return next();
   }
 
   return res.json({ product });
-};
-
-// - helpers - //
-
-const findProductById = productId => {
-  return PRODUCTS.find(item => {
-    return item.id === productId;
-  });
 };

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { PRODUCTS } from '../../mock-data';
 import { ProductListTemplate } from '../templates/ProductListTemplate';
 import { startFetchProducts } from '../../services/ProductList/actions';
 import {
