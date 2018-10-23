@@ -1,6 +1,7 @@
 const env = process.env.NODE_ENV || 'development';
 
 const fs = require('fs');
+
 const path = require('path');
 const Sequelize = require('sequelize');
 const config = require(__dirname + '/../config/config.js')[env];
@@ -23,7 +24,10 @@ if (config.use_env_variable) {
 }
 
 // Add all modules to this array
-const modelModules = [require('./product')];
+const modelModules = [
+  require('./product'),
+  require('./contactform'),
+];
 
 modelModules.forEach(modelModule => {
   const model = modelModule(sequelize, DataTypes);
