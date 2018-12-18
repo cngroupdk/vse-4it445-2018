@@ -2,13 +2,18 @@
 
 ## Requirements
 
-- Node.js v6.11 or later
+- Node.js v8.12.0 or later
 - `yarn` (`npm install --global yarn`)
+- MySQL database
 
 ## Install
 
+Copy `./src/config/config.js.example` to `src/config/config.js` and change it to your MySQL credentials.
+
 ```sh
 yarn install
+yarn sequelize db:migrate
+yarn sequelize db:seed:all
 ```
 
 ## Run Local Dev Server
@@ -20,6 +25,7 @@ yarn dev
 ## Run Local Production Server
 
 ```sh
+yarn build
 yarn start
 ```
 
