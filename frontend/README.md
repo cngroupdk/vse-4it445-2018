@@ -1,3 +1,26 @@
+# Frontend
+
+## Requirements
+
+- Node.js v8.12.0 or later
+- `yarn` (`npm install --global yarn`)
+
+## Installation
+
+```sh
+yarn install
+```
+
+## Run Local Dev Server
+
+```sh
+yarn start
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
